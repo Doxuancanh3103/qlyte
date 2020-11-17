@@ -1,0 +1,148 @@
+2020-10-04 20:22:55.313  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-04 20:22:56.203  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] vt.qlkdtt.yte.Application                : No active profile set, falling back to default profiles: default
+2020-10-04 20:23:00.375  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-04 20:23:01.016  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 610ms. Found 28 JPA repository interfaces.
+2020-10-04 20:23:01.922  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3482cb1b-89d5-32ac-85c9-69a2ac3deb12
+2020-10-04 20:23:02.406  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$319bbc11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-04 20:23:02.484  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$b11c0943] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-04 20:23:04.015  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8998 (http)
+2020-10-04 20:23:04.062  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-04 20:23:04.062  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-10-04 20:23:04.265  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-04 20:23:04.265  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8015 ms
+2020-10-04 20:23:08.765 DEBUG [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] me.coong.web.filter.WebTracingFilter     : Filter 'webTracingFilter' configured for use
+2020-10-04 20:23:09.109  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-04 20:23:09.343  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-04 20:23:09.546  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-10-04 20:23:09.765  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-10-04 20:23:09.765  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-10-04 20:23:10.296  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-10-04 20:23:10.921  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-10-04 20:23:13.406  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-04 20:23:13.510  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-04 20:23:18.568  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2020-10-04 20:23:19.272  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-10-04 20:23:19.865  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1463d9bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@490f8856, org.springframework.security.web.header.HeaderWriterFilter@570c333, org.springframework.web.filter.CorsFilter@5ed1c3dc, org.springframework.web.filter.CharacterEncodingFilter@7b29f8d, org.springframework.security.web.authentication.logout.LogoutFilter@78a6cb0c, vt.qlkdtt.yte.security.jwt.JwtAuthenticationFilter@ad0322a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a34d0a4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@302c0702, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a7098f2, org.springframework.security.web.session.SessionManagementFilter@294a5a18, org.springframework.security.web.access.ExceptionTranslationFilter@595e02c6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ef2f69b]
+2020-10-04 20:23:19.882  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2020-10-04 20:23:20.330  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-04 20:23:23.812  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-10-04 20:23:23.865  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-10-04 20:23:23.924  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-10-04 20:23:24.279  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_1
+2020-10-04 20:23:24.426  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_2
+2020-10-04 20:23:24.434  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
+2020-10-04 20:23:24.517  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
+2020-10-04 20:23:24.524  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-10-04 20:23:24.525  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-10-04 20:23:24.533  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_3
+2020-10-04 20:23:24.551  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByCodeUsingGET_1
+2020-10-04 20:23:24.631  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_3
+2020-10-04 20:23:24.688  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_4
+2020-10-04 20:23:24.720  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeProductStatusUsingPOST_1
+2020-10-04 20:23:24.760  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_5
+2020-10-04 20:23:24.809  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_6
+2020-10-04 20:23:24.896  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8998 (http) with context path ''
+2020-10-04 20:23:25.232  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [nio-8998-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-04 20:23:25.232  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [nio-8998-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-04 20:23:25.271  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [nio-8998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 39 ms
+2020-10-04 20:23:25.292  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [  restartedMain] vt.qlkdtt.yte.Application                : Started Application in 31.978 seconds (JVM running for 34.16)
+2020-10-04 20:23:25.346 DEBUG [vt.qlkdtt-yte-ws,632c57710288eba5,632c57710288eba5,false] 5112 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : GET /swagger-ui.html
+2020-10-04 20:23:25.474 DEBUG [vt.qlkdtt-yte-ws,632c57710288eba5,632c57710288eba5,false] 5112 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : 200//129 ms
+2020-10-04 20:23:26.456 DEBUG [vt.qlkdtt-yte-ws,5c9b566986f66051,5c9b566986f66051,false] 5112 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : GET /swagger-resources
+2020-10-04 20:23:26.465 DEBUG [vt.qlkdtt-yte-ws,5c9b566986f66051,5c9b566986f66051,false] 5112 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : 200//9 ms
+2020-10-04 20:23:26.597 DEBUG [vt.qlkdtt-yte-ws,3474e75db33a9b4e,3474e75db33a9b4e,false] 5112 --- [nio-8998-exec-9] me.coong.web.filter.WebTracingFilter     : GET /v2/api-docs
+2020-10-04 20:23:26.598 DEBUG [vt.qlkdtt-yte-ws,1a24e959a6dd920d,1a24e959a6dd920d,false] 5112 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : GET /
+2020-10-04 20:23:26.688 DEBUG [vt.qlkdtt-yte-ws,1a24e959a6dd920d,1a24e959a6dd920d,false] 5112 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : 200//89 ms
+2020-10-04 20:23:26.692 DEBUG [vt.qlkdtt-yte-ws,ed2a2216739f5e8e,ed2a2216739f5e8e,false] 5112 --- [nio-8998-exec-2] me.coong.web.filter.WebTracingFilter     : GET /csrf
+2020-10-04 20:23:26.700 DEBUG [vt.qlkdtt-yte-ws,ed2a2216739f5e8e,ed2a2216739f5e8e,false] 5112 --- [nio-8998-exec-2] me.coong.web.filter.WebTracingFilter     : 404//8 ms
+2020-10-04 20:23:26.911 DEBUG [vt.qlkdtt-yte-ws,3474e75db33a9b4e,3474e75db33a9b4e,false] 5112 --- [nio-8998-exec-9] me.coong.web.filter.WebTracingFilter     : 200//314 ms
+2020-10-04 20:23:29.638 DEBUG [vt.qlkdtt-yte-ws,153e46d7c9e67f8c,153e46d7c9e67f8c,false] 5112 --- [nio-8998-exec-7] me.coong.web.filter.WebTracingFilter     : GET /swagger-ui.html
+2020-10-04 20:23:29.647 DEBUG [vt.qlkdtt-yte-ws,153e46d7c9e67f8c,153e46d7c9e67f8c,false] 5112 --- [nio-8998-exec-7] me.coong.web.filter.WebTracingFilter     : 200//9 ms
+2020-10-04 20:23:29.975 DEBUG [vt.qlkdtt-yte-ws,0454c225113a29e3,0454c225113a29e3,false] 5112 --- [nio-8998-exec-6] me.coong.web.filter.WebTracingFilter     : GET /swagger-resources
+2020-10-04 20:23:29.979 DEBUG [vt.qlkdtt-yte-ws,0454c225113a29e3,0454c225113a29e3,false] 5112 --- [nio-8998-exec-6] me.coong.web.filter.WebTracingFilter     : 200//4 ms
+2020-10-04 20:23:30.026 DEBUG [vt.qlkdtt-yte-ws,97fd4079f879af6a,97fd4079f879af6a,false] 5112 --- [nio-8998-exec-4] me.coong.web.filter.WebTracingFilter     : GET /v2/api-docs
+2020-10-04 20:23:30.027 DEBUG [vt.qlkdtt-yte-ws,6b7ac3e0e0511d01,6b7ac3e0e0511d01,false] 5112 --- [nio-8998-exec-7] me.coong.web.filter.WebTracingFilter     : GET /
+2020-10-04 20:23:30.037 DEBUG [vt.qlkdtt-yte-ws,6b7ac3e0e0511d01,6b7ac3e0e0511d01,false] 5112 --- [nio-8998-exec-7] me.coong.web.filter.WebTracingFilter     : 200//10 ms
+2020-10-04 20:23:30.065 DEBUG [vt.qlkdtt-yte-ws,97fd4079f879af6a,97fd4079f879af6a,false] 5112 --- [nio-8998-exec-4] me.coong.web.filter.WebTracingFilter     : 200//39 ms
+2020-10-04 20:23:30.436 DEBUG [vt.qlkdtt-yte-ws,9b93ef9baba8f5d0,9b93ef9baba8f5d0,false] 5112 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : GET /csrf
+2020-10-04 20:23:30.444 DEBUG [vt.qlkdtt-yte-ws,9b93ef9baba8f5d0,9b93ef9baba8f5d0,false] 5112 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : 404//8 ms
+2020-10-04 20:24:53.862 DEBUG [vt.qlkdtt-yte-ws,5aebc60885be7a85,5aebc60885be7a85,false] 5112 --- [nio-8998-exec-8] me.coong.web.filter.WebTracingFilter     : GET /area/getDistrictListByProvince
+2020-10-04 20:24:54.074 DEBUG [vt.qlkdtt-yte-ws,5aebc60885be7a85,5aebc60885be7a85,false] 5112 --- [nio-8998-exec-8] me.coong.web.filter.WebTracingFilter     : 204//212 ms
+2020-10-04 20:25:46.283 DEBUG [vt.qlkdtt-yte-ws,ea6bc721f1906f44,ea6bc721f1906f44,false] 5112 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : GET /area/getDistrictListByProvince
+2020-10-04 20:25:46.288 DEBUG [vt.qlkdtt-yte-ws,ea6bc721f1906f44,ea6bc721f1906f44,false] 5112 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : 204//5 ms
+2020-10-04 20:26:00.107 DEBUG [vt.qlkdtt-yte-ws,8a9a4635f4dcbb60,8a9a4635f4dcbb60,false] 5112 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : GET /area/getAreaByCode
+2020-10-04 20:26:00.142 DEBUG [vt.qlkdtt-yte-ws,8a9a4635f4dcbb60,8a9a4635f4dcbb60,false] 5112 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : 200//35 ms
+2020-10-04 20:34:14.746  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [      Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-04 20:34:14.760  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [      Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-04 20:34:14.767  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-04 20:34:14.822  INFO [vt.qlkdtt-yte-ws,,,] 5112 --- [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-04 21:19:38.866  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-04 21:19:39.760  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] vt.qlkdtt.yte.Application                : No active profile set, falling back to default profiles: default
+2020-10-04 21:19:43.114  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-04 21:19:43.713  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 589ms. Found 28 JPA repository interfaces.
+2020-10-04 21:19:44.417  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3482cb1b-89d5-32ac-85c9-69a2ac3deb12
+2020-10-04 21:19:44.902  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$82108421] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-04 21:19:44.976  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$190d153] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-04 21:19:46.582  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8998 (http)
+2020-10-04 21:19:46.646  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-04 21:19:46.646  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-10-04 21:19:46.874  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-04 21:19:46.875  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7088 ms
+2020-10-04 21:19:50.757 DEBUG [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] me.coong.web.filter.WebTracingFilter     : Filter 'webTracingFilter' configured for use
+2020-10-04 21:19:51.058  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-04 21:19:51.342  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-04 21:19:51.549  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-10-04 21:19:51.758  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.15.Final}
+2020-10-04 21:19:51.760  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-10-04 21:19:52.269  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-10-04 21:19:52.906  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2020-10-04 21:19:55.380  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-04 21:19:55.500  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-04 21:19:59.385  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2020-10-04 21:19:59.901  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-10-04 21:20:00.370  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3db47d59, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ac7884e, org.springframework.security.web.header.HeaderWriterFilter@21892033, org.springframework.web.filter.CorsFilter@4ecedb3e, org.springframework.web.filter.CharacterEncodingFilter@3efaac6d, org.springframework.security.web.authentication.logout.LogoutFilter@5c86d125, vt.qlkdtt.yte.security.jwt.JwtAuthenticationFilter@32ca1fc4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bb0a3f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c52fc10, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3144bf0e, org.springframework.security.web.session.SessionManagementFilter@214193a, org.springframework.security.web.access.ExceptionTranslationFilter@530f9d7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@68e5a2c6]
+2020-10-04 21:20:00.384  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.aop.framework.CglibAopProxy          : Unable to proxy interface-implementing method [public final void org.springframework.web.filter.GenericFilterBean.init(javax.servlet.FilterConfig) throws javax.servlet.ServletException] because it is marked as final: Consider using interface-based JDK proxies instead!
+2020-10-04 21:20:00.812  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-04 21:20:02.784  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-10-04 21:20:02.818  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-10-04 21:20:02.864  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-10-04 21:20:03.145  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_1
+2020-10-04 21:20:03.253  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_2
+2020-10-04 21:20:03.260  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
+2020-10-04 21:20:03.320  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
+2020-10-04 21:20:03.324  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-10-04 21:20:03.326  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-10-04 21:20:03.330  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_3
+2020-10-04 21:20:03.341  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByCodeUsingGET_1
+2020-10-04 21:20:03.405  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_3
+2020-10-04 21:20:03.447  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_4
+2020-10-04 21:20:03.481  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: changeProductStatusUsingPOST_1
+2020-10-04 21:20:03.510  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_5
+2020-10-04 21:20:03.546  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_6
+2020-10-04 21:20:03.622  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8998 (http) with context path ''
+2020-10-04 21:20:03.917  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [  restartedMain] vt.qlkdtt.yte.Application                : Started Application in 26.46 seconds (JVM running for 28.203)
+2020-10-04 21:20:07.268  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [nio-8998-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-04 21:20:07.269  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [nio-8998-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-04 21:20:07.312  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [nio-8998-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 43 ms
+2020-10-04 21:20:07.384 DEBUG [vt.qlkdtt-yte-ws,e8ec3310a3ec1887,e8ec3310a3ec1887,false] 11352 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : GET /swagger-ui.html
+2020-10-04 21:20:07.483 DEBUG [vt.qlkdtt-yte-ws,e8ec3310a3ec1887,e8ec3310a3ec1887,false] 11352 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : 200//99 ms
+2020-10-04 21:20:07.939 DEBUG [vt.qlkdtt-yte-ws,471b6152780f8fce,471b6152780f8fce,false] 11352 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : GET /swagger-resources
+2020-10-04 21:20:07.943 DEBUG [vt.qlkdtt-yte-ws,471b6152780f8fce,471b6152780f8fce,false] 11352 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : 200//4 ms
+2020-10-04 21:20:07.978 DEBUG [vt.qlkdtt-yte-ws,fc8529d1d08f799b,fc8529d1d08f799b,false] 11352 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : GET /
+2020-10-04 21:20:07.978 DEBUG [vt.qlkdtt-yte-ws,0de15a9f68e5405a,0de15a9f68e5405a,false] 11352 --- [nio-8998-exec-9] me.coong.web.filter.WebTracingFilter     : GET /v2/api-docs
+2020-10-04 21:20:08.051 DEBUG [vt.qlkdtt-yte-ws,fc8529d1d08f799b,fc8529d1d08f799b,false] 11352 --- [nio-8998-exec-1] me.coong.web.filter.WebTracingFilter     : 200//73 ms
+2020-10-04 21:20:08.057 DEBUG [vt.qlkdtt-yte-ws,3d230868ab73347d,3d230868ab73347d,false] 11352 --- [nio-8998-exec-6] me.coong.web.filter.WebTracingFilter     : GET /csrf
+2020-10-04 21:20:08.064 DEBUG [vt.qlkdtt-yte-ws,3d230868ab73347d,3d230868ab73347d,false] 11352 --- [nio-8998-exec-6] me.coong.web.filter.WebTracingFilter     : 404//7 ms
+2020-10-04 21:20:08.223 DEBUG [vt.qlkdtt-yte-ws,0de15a9f68e5405a,0de15a9f68e5405a,false] 11352 --- [nio-8998-exec-9] me.coong.web.filter.WebTracingFilter     : 200//245 ms
+2020-10-04 21:21:01.247 DEBUG [vt.qlkdtt-yte-ws,fc1490b99f11b9bf,fc1490b99f11b9bf,false] 11352 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : GET /area/getAreaByCode
+2020-10-04 21:21:01.397 DEBUG [vt.qlkdtt-yte-ws,fc1490b99f11b9bf,fc1490b99f11b9bf,false] 11352 --- [io-8998-exec-10] me.coong.web.filter.WebTracingFilter     : 200//150 ms
+2020-10-04 21:21:37.822 DEBUG [vt.qlkdtt-yte-ws,18ce1de6b64601b6,18ce1de6b64601b6,false] 11352 --- [nio-8998-exec-4] me.coong.web.filter.WebTracingFilter     : GET /area/getAreaByCode
+2020-10-04 21:22:04.497 DEBUG [vt.qlkdtt-yte-ws,18ce1de6b64601b6,18ce1de6b64601b6,false] 11352 --- [nio-8998-exec-4] me.coong.web.filter.WebTracingFilter     : 200//26674 ms
+2020-10-04 21:28:34.111  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [      Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-04 21:28:34.135  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [      Thread-12] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-04 21:28:34.143  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-04 21:28:34.177  INFO [vt.qlkdtt-yte-ws,,,] 11352 --- [      Thread-12] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
