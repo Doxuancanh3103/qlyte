@@ -1,0 +1,55 @@
+server:
+  port: 8998
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    me.coong: debug
+#    org.hibernate: warn
+#    org.hibernate.SQL: debug
+#    org.hibernate.type: trace
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
+#    org.springframework.web.filter: trace
+#    org.springframework.web.filter.DelegatingFilterProxy: trace
+spring:
+  security:
+    ignored: /**
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: vt.qlkdtt-yte-ws
+  datasource:
+    url: jdbc:mysql://localhost:3306/vt_qlkdtt?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=Asia/Ho_Chi_Minh
+    username: root
+    password: anhcanh3103
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 2
+      connection-timeout: 3000
+      connection-test-query: select 1 from dual
+  jpa:
+    open-in-view: true
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      ddl-auto: validate
+      use-new-id-generator-mappings: false
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  mvc:
+    log-resolved-exception: true
+    throw-exception-if-no-handler-found: true
+uploadFile:
+  uploadDir: "F:\\20200428\\FileUpload"
+  downloadDir: "F:\\20200428\\FileUpload"
+  maxUploadSizeInMb: 10
+  splitChar: "\\"

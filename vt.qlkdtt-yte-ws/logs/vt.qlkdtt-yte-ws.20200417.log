@@ -1,0 +1,1241 @@
+[2m2020-04-17 07:46:50.833[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m7400[0;39m [2m---[0;39m [2m[l-1 housekeeper][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h24m50s23ms425µs700ns).
+[2m2020-04-17 07:46:50.998[0;39m [33m WARN [vt.qlkdtt-yte-ws,86a4d0c5262c2643,86a4d0c5262c2643,false][0;39m [35m7400[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mcom.zaxxer.hikari.pool.ProxyConnection  [0;39m [2m:[0;39m HikariPool-1 - Connection com.mysql.cj.jdbc.ConnectionImpl@49be197b marked as broken because of SQLSTATE(08S01), ErrorCode(0)
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: The last packet successfully received from the server was 51,890,158 milliseconds ago. The last packet sent successfully to the server was 51,890,158 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:60)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2265)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2028)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1990)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:949)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:351)
+	at org.hibernate.loader.Loader.doList(Loader.java:2787)
+	at org.hibernate.loader.Loader.doList(Loader.java:2770)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2604)
+	at org.hibernate.loader.Loader.list(Loader.java:2599)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:338)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:2243)
+	at org.hibernate.internal.AbstractSharedSessionContract.list(AbstractSharedSessionContract.java:1069)
+	at org.hibernate.query.internal.NativeQueryImpl.doList(NativeQueryImpl.java:170)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1506)
+	at org.hibernate.query.Query.getResultList(Query.java:132)
+	at vt.qlkdtt.yte.repository.PartnerRepoCustomImpl.searchPartner(PartnerRepoCustomImpl.java:174)
+	at vt.qlkdtt.yte.repository.PartnerRepoCustomImpl$$FastClassBySpringCGLIB$$97cd2675.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at vt.qlkdtt.yte.repository.PartnerRepoCustomImpl$$EnhancerBySpringCGLIB$$9c81f1f8.searchPartner(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:144)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$ExposeRepositoryInvocationInterceptor.invoke(CrudMethodMetadataPostProcessor.java:364)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy180.searchPartner(Unknown Source)
+	at vt.qlkdtt.yte.service.impl.PartnerServiceImpl.searchPartner(PartnerServiceImpl.java:33)
+	at vt.qlkdtt.yte.service.impl.PartnerServiceImpl$$FastClassBySpringCGLIB$$ebcf5034.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at vt.qlkdtt.yte.service.impl.PartnerServiceImpl$$EnhancerBySpringCGLIB$$a3ce6927.searchPartner(<generated>)
+	at vt.qlkdtt.yte.web.controller.PartnerController.searchPartner(PartnerController.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.AbstractRequestLoggingFilter.doFilterInternal(AbstractRequestLoggingFilter.java:263)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at me.coong.web.filter.WebTracingFilter.doFilterInternal(WebTracingFilter.java:45)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.cloud.sleuth.instrument.web.ExceptionLoggingFilter.doFilter(ExceptionLoggingFilter.java:50)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:82)
+	at org.springframework.cloud.sleuth.instrument.web.LazyTracingFilter.doFilter(TraceWebServletAutoConfiguration.java:145)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 51,890,158 milliseconds ago. The last packet sent successfully to the server was 51,890,158 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:570)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:625)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 149 common frames omitted
+Caused by: java.net.SocketException: Connection reset by peer: socket write error
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:110)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:150)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:55)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:50)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:561)
+	... 153 common frames omitted
+
+[2m2020-04-17 07:46:51.060[0;39m [33m WARN [vt.qlkdtt-yte-ws,86a4d0c5262c2643,86a4d0c5262c2643,false][0;39m [35m7400[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m SQL Error: 0, SQLState: 08S01
+[2m2020-04-17 07:46:51.065[0;39m [31mERROR [vt.qlkdtt-yte-ws,86a4d0c5262c2643,86a4d0c5262c2643,false][0;39m [35m7400[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m The last packet successfully received from the server was 51,890,158 milliseconds ago. The last packet sent successfully to the server was 51,890,158 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+[2m2020-04-17 07:46:51.775[0;39m [31mERROR [vt.qlkdtt-yte-ws,86a4d0c5262c2643,86a4d0c5262c2643,false][0;39m [35m7400[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mo.s.t.i.TransactionInterceptor          [0;39m [2m:[0;39m Application exception overridden by rollback exception
+
+org.springframework.dao.DataAccessResourceFailureException: could not extract ResultSet; nested exception is org.hibernate.exception.JDBCConnectionException: could not extract ResultSet
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:254)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:528)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:153)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at vt.qlkdtt.yte.repository.PartnerRepoCustomImpl$$EnhancerBySpringCGLIB$$9c81f1f8.searchPartner(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:144)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$ExposeRepositoryInvocationInterceptor.invoke(CrudMethodMetadataPostProcessor.java:364)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy180.searchPartner(Unknown Source)
+	at vt.qlkdtt.yte.service.impl.PartnerServiceImpl.searchPartner(PartnerServiceImpl.java:33)
+	at vt.qlkdtt.yte.service.impl.PartnerServiceImpl$$FastClassBySpringCGLIB$$ebcf5034.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at vt.qlkdtt.yte.service.impl.PartnerServiceImpl$$EnhancerBySpringCGLIB$$a3ce6927.searchPartner(<generated>)
+	at vt.qlkdtt.yte.web.controller.PartnerController.searchPartner(PartnerController.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:65)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.AbstractRequestLoggingFilter.doFilterInternal(AbstractRequestLoggingFilter.java:263)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at me.coong.web.filter.WebTracingFilter.doFilterInternal(WebTracingFilter.java:45)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.cloud.sleuth.instrument.web.ExceptionLoggingFilter.doFilter(ExceptionLoggingFilter.java:50)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:82)
+	at org.springframework.cloud.sleuth.instrument.web.LazyTracingFilter.doFilter(TraceWebServletAutoConfiguration.java:145)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.hibernate.exception.JDBCConnectionException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:115)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:69)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2265)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2028)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1990)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:949)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:351)
+	at org.hibernate.loader.Loader.doList(Loader.java:2787)
+	at org.hibernate.loader.Loader.doList(Loader.java:2770)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2604)
+	at org.hibernate.loader.Loader.list(Loader.java:2599)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:338)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:2243)
+	at org.hibernate.internal.AbstractSharedSessionContract.list(AbstractSharedSessionContract.java:1069)
+	at org.hibernate.query.internal.NativeQueryImpl.doList(NativeQueryImpl.java:170)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1506)
+	at org.hibernate.query.Query.getResultList(Query.java:132)
+	at vt.qlkdtt.yte.repository.PartnerRepoCustomImpl.searchPartner(PartnerRepoCustomImpl.java:174)
+	at vt.qlkdtt.yte.repository.PartnerRepoCustomImpl$$FastClassBySpringCGLIB$$97cd2675.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	... 124 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: The last packet successfully received from the server was 51,890,158 milliseconds ago. The last packet sent successfully to the server was 51,890,158 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:60)
+	... 145 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 51,890,158 milliseconds ago. The last packet sent successfully to the server was 51,890,158 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:570)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:625)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
+	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1075)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:930)
+	... 149 common frames omitted
+Caused by: java.net.SocketException: Connection reset by peer: socket write error
+	at java.base/java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.base/java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:110)
+	at java.base/java.net.SocketOutputStream.write(SocketOutputStream.java:150)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at com.mysql.cj.protocol.a.SimplePacketSender.send(SimplePacketSender.java:55)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketSender.send(TimeTrackingPacketSender.java:50)
+	at com.mysql.cj.protocol.a.NativeProtocol.send(NativeProtocol.java:561)
+	... 153 common frames omitted
+
+[2m2020-04-17 07:46:51.818[0;39m [31mERROR [vt.qlkdtt-yte-ws,86a4d0c5262c2643,86a4d0c5262c2643,false][0;39m [35m7400[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mv.q.y.web.controller.PartnerController  [0;39m [2m:[0;39m Could not roll back JPA transaction; nested exception is org.hibernate.TransactionException: Unable to rollback against JDBC Connection
+[2m2020-04-17 07:46:51.827[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,86a4d0c5262c2643,86a4d0c5262c2643,false][0;39m [35m7400[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//51900133 ms
+[2m2020-04-17 09:15:46.124[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7400[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:15:46.143[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7400[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:15:46.163[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7400[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2020-04-17 09:15:46.172[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7400[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
+[2m2020-04-17 09:16:04.591[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-04-17 09:16:05.413[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2020-04-17 09:16:08.066[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2020-04-17 09:16:08.210[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 132ms. Found 2 JPA repository interfaces.
+[2m2020-04-17 09:16:09.007[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=f86bd68e-8dd8-303f-bb2e-6acc76c0733d
+[2m2020-04-17 09:16:09.431[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a810390c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:16:09.509[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$2790863e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:16:10.895[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8998 (http)
+[2m2020-04-17 09:16:10.936[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2020-04-17 09:16:10.937[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.30]
+[2m2020-04-17 09:16:11.118[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2020-04-17 09:16:11.118[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 5683 ms
+[2m2020-04-17 09:16:14.511[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m Filter 'webTracingFilter' configured for use
+[2m2020-04-17 09:16:14.778[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 09:16:15.035[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2020-04-17 09:16:15.167[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2020-04-17 09:16:15.266[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.15.Final}
+[2m2020-04-17 09:16:15.269[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2020-04-17 09:16:15.474[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2m2020-04-17 09:16:15.687[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[2m2020-04-17 09:16:16.865[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:16:17.092[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-04-17 09:16:17.869[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+[2m2020-04-17 09:16:20.098[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.a.e.web.EndpointLinksResolver     [0;39m [2m:[0;39m Exposing 17 endpoint(s) beneath base path '/actuator'
+[2m2020-04-17 09:16:20.877[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mpertySourcedRequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2m2020-04-17 09:16:21.583[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:16:24.459[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Context refreshed
+[2m2020-04-17 09:16:24.490[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Found 1 custom documentation plugin(s)
+[2m2020-04-17 09:16:24.554[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36ms.d.s.w.s.ApiListingReferenceScanner    [0;39m [2m:[0;39m Scanning for api listing references
+[2m2020-04-17 09:16:24.973[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8998 (http) with context path ''
+[2m2020-04-17 09:16:25.285[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m Started Application in 22.01 seconds (JVM running for 24.497)
+[2m2020-04-17 09:16:25.919[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[n(1)-10.61.5.80][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2020-04-17 09:16:25.921[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[n(1)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-04-17 09:16:25.980[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[n(1)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 59 ms
+[2m2020-04-17 09:17:38.068[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,2051c0c109974ae6,2051c0c109974ae6,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /swagger-ui.html
+[2m2020-04-17 09:17:38.138[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,2051c0c109974ae6,2051c0c109974ae6,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//70 ms
+[2m2020-04-17 09:17:38.894[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,c65427fadf9ce7d2,c65427fadf9ce7d2,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[io-8998-exec-10][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /swagger-resources
+[2m2020-04-17 09:17:38.902[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,c65427fadf9ce7d2,c65427fadf9ce7d2,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[io-8998-exec-10][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//8 ms
+[2m2020-04-17 09:17:38.984[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,a20db70362a09890,a20db70362a09890,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /v2/api-docs
+[2m2020-04-17 09:17:38.985[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,7e9d55929dd739b0,7e9d55929dd739b0,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-5][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /
+[2m2020-04-17 09:17:39.074[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,7e9d55929dd739b0,7e9d55929dd739b0,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-5][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//89 ms
+[2m2020-04-17 09:17:39.089[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,ee28287189ec3ade,ee28287189ec3ade,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-3][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /csrf
+[2m2020-04-17 09:17:39.107[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,ee28287189ec3ade,ee28287189ec3ade,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-3][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 404//18 ms
+[2m2020-04-17 09:17:39.224[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,a20db70362a09890,a20db70362a09890,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//241 ms
+[2m2020-04-17 09:18:07.093[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,2646ea4212988394,2646ea4212988394,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-2][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:18:07.176[0;39m [31mERROR [vt.qlkdtt-yte-ws,2646ea4212988394,2646ea4212988394,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-2][0;39m [36mv.q.y.web.controller.ProductController  [0;39m [2m:[0;39m Could not locate named parameter [:pgName], expecting one of [pgNameAND, prNameCode]; nested exception is java.lang.IllegalArgumentException: Could not locate named parameter [:pgName], expecting one of [pgNameAND, prNameCode]
+[2m2020-04-17 09:18:07.182[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,2646ea4212988394,2646ea4212988394,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-2][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//89 ms
+[2m2020-04-17 09:18:32.039[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,7ac4428d2b867486,7ac4428d2b867486,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-4][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:18:52.567[0;39m [31mERROR [vt.qlkdtt-yte-ws,7ac4428d2b867486,7ac4428d2b867486,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-4][0;39m [36mv.q.y.web.controller.ProductController  [0;39m [2m:[0;39m Could not locate named parameter [:pgName], expecting one of [pgNameAND, prNameCode]; nested exception is java.lang.IllegalArgumentException: Could not locate named parameter [:pgName], expecting one of [pgNameAND, prNameCode]
+[2m2020-04-17 09:18:52.569[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,7ac4428d2b867486,7ac4428d2b867486,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-4][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//20530 ms
+[2m2020-04-17 09:19:08.547[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,de61da52cc838831,de61da52cc838831,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-8][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:20:45.186[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[l-1 housekeeper][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m23s662ms91µs100ns).
+[2m2020-04-17 09:20:49.307[0;39m [31mERROR [vt.qlkdtt-yte-ws,de61da52cc838831,de61da52cc838831,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-8][0;39m [36mv.q.y.web.controller.ProductController  [0;39m [2m:[0;39m Could not locate named parameter [:pgName], expecting one of [pgNameAND, prNameCode]; nested exception is java.lang.IllegalArgumentException: Could not locate named parameter [:pgName], expecting one of [pgNameAND, prNameCode]
+[2m2020-04-17 09:20:49.311[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,de61da52cc838831,de61da52cc838831,false][0;39m [35m10012[0;39m [2m---[0;39m [2m[nio-8998-exec-8][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//100764 ms
+[2m2020-04-17 09:21:41.592[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:21:41.609[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:21:41.625[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2020-04-17 09:21:41.644[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m10012[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
+[2m2020-04-17 09:21:55.094[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-04-17 09:21:55.938[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2020-04-17 09:21:58.508[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2020-04-17 09:21:58.616[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 99ms. Found 2 JPA repository interfaces.
+[2m2020-04-17 09:21:59.212[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=f86bd68e-8dd8-303f-bb2e-6acc76c0733d
+[2m2020-04-17 09:21:59.600[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7f772e2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:21:59.682[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$fef77b5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:22:01.100[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8998 (http)
+[2m2020-04-17 09:22:01.132[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2020-04-17 09:22:01.133[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.30]
+[2m2020-04-17 09:22:01.311[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2020-04-17 09:22:01.311[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 5358 ms
+[2m2020-04-17 09:22:04.567[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m Filter 'webTracingFilter' configured for use
+[2m2020-04-17 09:22:04.841[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 09:22:05.151[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2020-04-17 09:22:05.266[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2020-04-17 09:22:05.369[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.15.Final}
+[2m2020-04-17 09:22:05.372[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2020-04-17 09:22:05.581[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2m2020-04-17 09:22:05.815[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[2m2020-04-17 09:22:07.043[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:22:07.298[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-04-17 09:22:08.139[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+[2m2020-04-17 09:22:10.458[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.a.e.web.EndpointLinksResolver     [0;39m [2m:[0;39m Exposing 17 endpoint(s) beneath base path '/actuator'
+[2m2020-04-17 09:22:11.187[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mpertySourcedRequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2m2020-04-17 09:22:11.828[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:22:14.648[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Context refreshed
+[2m2020-04-17 09:22:14.677[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Found 1 custom documentation plugin(s)
+[2m2020-04-17 09:22:14.768[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36ms.d.s.w.s.ApiListingReferenceScanner    [0;39m [2m:[0;39m Scanning for api listing references
+[2m2020-04-17 09:22:15.200[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8998 (http) with context path ''
+[2m2020-04-17 09:22:15.476[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m Started Application in 21.5 seconds (JVM running for 23.471)
+[2m2020-04-17 09:22:15.929[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[n(1)-10.61.5.80][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2020-04-17 09:22:15.931[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[n(1)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-04-17 09:22:15.984[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[n(1)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 53 ms
+[2m2020-04-17 09:22:22.877[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,8054188af31de5a1,8054188af31de5a1,false][0;39m [35m392[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:22:47.378[0;39m [31mERROR [vt.qlkdtt-yte-ws,8054188af31de5a1,8054188af31de5a1,false][0;39m [35m392[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mv.q.y.web.controller.ProductController  [0;39m [2m:[0;39m Could not locate named parameter [:pgName], expecting one of [prNameCode, pgName]; nested exception is java.lang.IllegalArgumentException: Could not locate named parameter [:pgName], expecting one of [prNameCode, pgName]
+[2m2020-04-17 09:22:47.436[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,8054188af31de5a1,8054188af31de5a1,false][0;39m [35m392[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//24559 ms
+[2m2020-04-17 09:23:27.169[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:23:27.194[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:23:27.205[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2020-04-17 09:23:27.226[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m392[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
+[2m2020-04-17 09:23:36.771[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-04-17 09:23:37.507[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2020-04-17 09:23:39.898[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2020-04-17 09:23:40.023[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 115ms. Found 2 JPA repository interfaces.
+[2m2020-04-17 09:23:40.601[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=f86bd68e-8dd8-303f-bb2e-6acc76c0733d
+[2m2020-04-17 09:23:40.942[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2d317cda] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:23:40.993[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$acb1ca0c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:23:42.314[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8998 (http)
+[2m2020-04-17 09:23:42.351[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2020-04-17 09:23:42.351[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.30]
+[2m2020-04-17 09:23:42.521[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2020-04-17 09:23:42.522[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 5000 ms
+[2m2020-04-17 09:23:45.533[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m Filter 'webTracingFilter' configured for use
+[2m2020-04-17 09:23:45.756[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 09:23:46.007[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2020-04-17 09:23:46.114[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2020-04-17 09:23:46.205[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.15.Final}
+[2m2020-04-17 09:23:46.207[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2020-04-17 09:23:46.388[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2m2020-04-17 09:23:46.595[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[2m2020-04-17 09:23:47.677[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:23:47.871[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-04-17 09:23:48.543[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+[2m2020-04-17 09:23:50.781[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.a.e.web.EndpointLinksResolver     [0;39m [2m:[0;39m Exposing 17 endpoint(s) beneath base path '/actuator'
+[2m2020-04-17 09:23:51.521[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mpertySourcedRequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2m2020-04-17 09:23:52.075[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:23:54.418[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Context refreshed
+[2m2020-04-17 09:23:54.443[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Found 1 custom documentation plugin(s)
+[2m2020-04-17 09:23:54.497[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36ms.d.s.w.s.ApiListingReferenceScanner    [0;39m [2m:[0;39m Scanning for api listing references
+[2m2020-04-17 09:23:54.824[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8998 (http) with context path ''
+[2m2020-04-17 09:23:55.061[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m Started Application in 19.351 seconds (JVM running for 21.357)
+[2m2020-04-17 09:23:55.738[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[n(3)-10.61.5.80][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2020-04-17 09:23:55.740[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[n(3)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-04-17 09:23:55.794[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[n(3)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 54 ms
+[2m2020-04-17 09:24:04.487[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,6d75100e147529d3,6d75100e147529d3,false][0;39m [35m13340[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:24:25.369[0;39m [31mERROR [vt.qlkdtt-yte-ws,6d75100e147529d3,6d75100e147529d3,false][0;39m [35m13340[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mv.q.y.web.controller.ProductController  [0;39m [2m:[0;39m Could not locate named parameter [:pgName], expecting one of [prNameCode, pgName]; nested exception is java.lang.IllegalArgumentException: Could not locate named parameter [:pgName], expecting one of [prNameCode, pgName]
+[2m2020-04-17 09:24:25.420[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,6d75100e147529d3,6d75100e147529d3,false][0;39m [35m13340[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//20933 ms
+[2m2020-04-17 09:25:47.641[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,5ca2a758ed4f89c3,5ca2a758ed4f89c3,false][0;39m [35m13340[0;39m [2m---[0;39m [2m[nio-8998-exec-3][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:27:11.449[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[l-1 housekeeper][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s134ms454µs600ns).
+[2m2020-04-17 09:27:11.454[0;39m [31mERROR [vt.qlkdtt-yte-ws,5ca2a758ed4f89c3,5ca2a758ed4f89c3,false][0;39m [35m13340[0;39m [2m---[0;39m [2m[nio-8998-exec-3][0;39m [36mv.q.y.web.controller.ProductController  [0;39m [2m:[0;39m Could not locate named parameter [:pgName], expecting one of [prNameCode, pgName]; nested exception is java.lang.IllegalArgumentException: Could not locate named parameter [:pgName], expecting one of [prNameCode, pgName]
+[2m2020-04-17 09:27:11.459[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,5ca2a758ed4f89c3,5ca2a758ed4f89c3,false][0;39m [35m13340[0;39m [2m---[0;39m [2m[nio-8998-exec-3][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//83817 ms
+[2m2020-04-17 09:27:11.679[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:27:11.694[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:27:11.705[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2020-04-17 09:27:11.719[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13340[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
+[2m2020-04-17 09:27:29.138[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-04-17 09:27:29.976[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2020-04-17 09:27:32.206[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2020-04-17 09:27:32.306[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 90ms. Found 2 JPA repository interfaces.
+[2m2020-04-17 09:27:32.935[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=f86bd68e-8dd8-303f-bb2e-6acc76c0733d
+[2m2020-04-17 09:27:33.287[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1fe5ca4f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:27:33.342[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$9f661781] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:27:34.580[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8998 (http)
+[2m2020-04-17 09:27:34.612[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2020-04-17 09:27:34.612[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.30]
+[2m2020-04-17 09:27:34.794[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2020-04-17 09:27:34.795[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 4803 ms
+[2m2020-04-17 09:27:37.814[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m Filter 'webTracingFilter' configured for use
+[2m2020-04-17 09:27:38.021[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 09:27:38.252[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2020-04-17 09:27:38.349[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2020-04-17 09:27:38.481[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.15.Final}
+[2m2020-04-17 09:27:38.483[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2020-04-17 09:27:38.660[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2m2020-04-17 09:27:38.862[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[2m2020-04-17 09:27:39.975[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:27:40.166[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-04-17 09:27:40.791[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+[2m2020-04-17 09:27:42.912[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.a.e.web.EndpointLinksResolver     [0;39m [2m:[0;39m Exposing 17 endpoint(s) beneath base path '/actuator'
+[2m2020-04-17 09:27:43.810[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mpertySourcedRequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2m2020-04-17 09:27:44.348[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:27:46.704[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Context refreshed
+[2m2020-04-17 09:27:46.733[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Found 1 custom documentation plugin(s)
+[2m2020-04-17 09:27:46.790[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36ms.d.s.w.s.ApiListingReferenceScanner    [0;39m [2m:[0;39m Scanning for api listing references
+[2m2020-04-17 09:27:47.155[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8998 (http) with context path ''
+[2m2020-04-17 09:27:47.419[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m Started Application in 19.323 seconds (JVM running for 21.401)
+[2m2020-04-17 09:27:48.470[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[n(3)-10.61.5.80][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2020-04-17 09:27:48.473[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[n(3)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-04-17 09:27:48.545[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[n(3)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 71 ms
+[2m2020-04-17 09:27:54.789[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,5b71e2f8b44cf889,5b71e2f8b44cf889,false][0;39m [35m13272[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:28:04.937[0;39m [33m WARN [vt.qlkdtt-yte-ws,5b71e2f8b44cf889,5b71e2f8b44cf889,false][0;39m [35m13272[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m SQL Error: 1064, SQLState: 42000
+[2m2020-04-17 09:28:04.940[0;39m [31mERROR [vt.qlkdtt-yte-ws,5b71e2f8b44cf889,5b71e2f8b44cf889,false][0;39m [35m13272[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'DISTINCT CONVERT(pn.NAME, CHAR(100)))FROMPRODUCT_GROUP pg,PROD_GROUP_PROD_OFFER ' at line 1
+[2m2020-04-17 09:28:28.920[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[l-1 housekeeper][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50s564ms13µs700ns).
+[2m2020-04-17 09:28:28.924[0;39m [31mERROR [vt.qlkdtt-yte-ws,5b71e2f8b44cf889,5b71e2f8b44cf889,false][0;39m [35m13272[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mv.q.y.web.controller.ProductController  [0;39m [2m:[0;39m could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[2m2020-04-17 09:28:28.953[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,5b71e2f8b44cf889,5b71e2f8b44cf889,false][0;39m [35m13272[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 204//34163 ms
+[2m2020-04-17 09:29:27.426[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:29:27.455[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:29:27.464[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2020-04-17 09:29:27.476[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m13272[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
+[2m2020-04-17 09:29:40.917[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-04-17 09:29:41.583[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2020-04-17 09:29:43.928[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2020-04-17 09:29:44.036[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 93ms. Found 2 JPA repository interfaces.
+[2m2020-04-17 09:29:44.589[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=f86bd68e-8dd8-303f-bb2e-6acc76c0733d
+[2m2020-04-17 09:29:44.911[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$99cba885] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:29:44.963[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$194bf5b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 09:29:46.190[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8998 (http)
+[2m2020-04-17 09:29:46.220[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2020-04-17 09:29:46.220[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.30]
+[2m2020-04-17 09:29:46.374[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2020-04-17 09:29:46.374[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 4777 ms
+[2m2020-04-17 09:29:48.882[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m Filter 'webTracingFilter' configured for use
+[2m2020-04-17 09:29:49.128[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 09:29:49.334[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Start completed.
+[2m2020-04-17 09:29:49.427[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2020-04-17 09:29:49.513[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.15.Final}
+[2m2020-04-17 09:29:49.516[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2020-04-17 09:29:49.665[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2m2020-04-17 09:29:49.842[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[2m2020-04-17 09:29:50.854[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 09:29:51.041[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.d.a.OptionalLiveReloadServer      [0;39m [2m:[0;39m LiveReload server is running on port 35729
+[2m2020-04-17 09:29:51.737[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+[2m2020-04-17 09:29:53.801[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.a.e.web.EndpointLinksResolver     [0;39m [2m:[0;39m Exposing 17 endpoint(s) beneath base path '/actuator'
+[2m2020-04-17 09:29:54.419[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mpertySourcedRequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[2m2020-04-17 09:29:54.930[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Initializing ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 09:29:57.147[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Context refreshed
+[2m2020-04-17 09:29:57.173[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36md.s.w.p.DocumentationPluginsBootstrapper[0;39m [2m:[0;39m Found 1 custom documentation plugin(s)
+[2m2020-04-17 09:29:57.227[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36ms.d.s.w.s.ApiListingReferenceScanner    [0;39m [2m:[0;39m Scanning for api listing references
+[2m2020-04-17 09:29:57.527[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat started on port(s): 8998 (http) with context path ''
+[2m2020-04-17 09:29:57.751[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m Started Application in 17.758 seconds (JVM running for 19.511)
+[2m2020-04-17 09:29:58.265[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[n(4)-10.61.5.80][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2m2020-04-17 09:29:58.267[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[n(4)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Initializing Servlet 'dispatcherServlet'
+[2m2020-04-17 09:29:58.314[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[n(4)-10.61.5.80][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m Completed initialization in 47 ms
+[2m2020-04-17 09:30:01.877[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,876e00bb346ec0e6,876e00bb346ec0e6,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:30:30.555[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,876e00bb346ec0e6,876e00bb346ec0e6,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-1][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//28678 ms
+[2m2020-04-17 09:31:12.808[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,a4fdc9525f55e361,a4fdc9525f55e361,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-3][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:31:12.831[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,a4fdc9525f55e361,a4fdc9525f55e361,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-3][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//23 ms
+[2m2020-04-17 09:31:20.512[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,446eb9ea4286ac6b,446eb9ea4286ac6b,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-4][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:31:20.537[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,446eb9ea4286ac6b,446eb9ea4286ac6b,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-4][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//25 ms
+[2m2020-04-17 09:31:27.576[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,8d6286820fb437af,8d6286820fb437af,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-5][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:31:27.598[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,8d6286820fb437af,8d6286820fb437af,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-5][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//23 ms
+[2m2020-04-17 09:31:37.174[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,e142a2ad1ed03e3a,e142a2ad1ed03e3a,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-6][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m GET /product/searchProduct
+[2m2020-04-17 09:31:37.203[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,e142a2ad1ed03e3a,e142a2ad1ed03e3a,false][0;39m [35m11672[0;39m [2m---[0;39m [2m[nio-8998-exec-6][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m 200//29 ms
+[2m2020-04-17 14:29:25.554[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mo.s.s.concurrent.ThreadPoolTaskExecutor [0;39m [2m:[0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+[2m2020-04-17 14:29:25.603[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+[2m2020-04-17 14:29:25.621[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown initiated...
+[2m2020-04-17 14:29:25.630[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m11672[0;39m [2m---[0;39m [2m[      Thread-11][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Shutdown completed.
+[2m2020-04-17 23:03:42.654[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.e.DevToolsPropertyDefaultsPostProcessor[0;39m [2m:[0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2m2020-04-17 23:03:43.548[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mvt.qlkdtt.yte.Application               [0;39m [2m:[0;39m No active profile set, falling back to default profiles: default
+[2m2020-04-17 23:03:45.872[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2m2020-04-17 23:03:45.980[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36m.s.d.r.c.RepositoryConfigurationDelegate[0;39m [2m:[0;39m Finished Spring Data repository scanning in 98ms. Found 2 JPA repository interfaces.
+[2m2020-04-17 23:03:46.562[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=f86bd68e-8dd8-303f-bb2e-6acc76c0733d
+[2m2020-04-17 23:03:46.974[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff138340] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 23:03:47.025[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$7e93d072] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2020-04-17 23:03:47.828[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.w.embedded.tomcat.TomcatWebServer [0;39m [2m:[0;39m Tomcat initialized with port(s): 8998 (http)
+[2m2020-04-17 23:03:47.854[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2020-04-17 23:03:47.854[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet engine: [Apache Tomcat/9.0.30]
+[2m2020-04-17 23:03:48.028[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2020-04-17 23:03:48.029[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 4468 ms
+[2m2020-04-17 23:03:50.328[0;39m [32mDEBUG [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mme.coong.web.filter.WebTracingFilter    [0;39m [2m:[0;39m Filter 'webTracingFilter' configured for use
+[2m2020-04-17 23:03:50.510[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 23:03:54.599[0;39m [31mERROR [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at com.zaxxer.hikari.HikariDataSource$$FastClassBySpringCGLIB$$eeb1ae86.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zaxxer.hikari.HikariDataSource$$EnhancerBySpringCGLIB$$49881648.getConnection(<generated>)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:320)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:357)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$1dea45af.CGLIB$jpaVendorAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$1dea45af$$FastClassBySpringCGLIB$$bc30a6c4.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$1dea45af.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at vt.qlkdtt.yte.Application.main(Application.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 90 common frames omitted
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 93 common frames omitted
+
+[2m2020-04-17 23:03:54.605[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.b.a.orm.jpa.DatabaseLookup          [0;39m [2m:[0;39m Unable to determine jdbc url from datasource
+
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:329)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:357)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$1dea45af.CGLIB$jpaVendorAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$1dea45af$$FastClassBySpringCGLIB$$bc30a6c4.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$1dea45af.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1159)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at vt.qlkdtt.yte.Application.main(Application.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:320)
+	... 67 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at com.zaxxer.hikari.HikariDataSource$$FastClassBySpringCGLIB$$eeb1ae86.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zaxxer.hikari.HikariDataSource$$EnhancerBySpringCGLIB$$49881648.getConnection(<generated>)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	... 68 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 90 common frames omitted
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 93 common frames omitted
+
+[2m2020-04-17 23:03:54.678[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2020-04-17 23:03:54.761[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.3.15.Final}
+[2m2020-04-17 23:03:54.763[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2020-04-17 23:03:54.964[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+[2m2020-04-17 23:03:55.137[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 23:03:59.140[0;39m [31mERROR [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at com.zaxxer.hikari.HikariDataSource$$FastClassBySpringCGLIB$$eeb1ae86.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zaxxer.hikari.HikariDataSource$$EnhancerBySpringCGLIB$$49881648.getConnection(<generated>)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1215)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1246)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at vt.qlkdtt.yte.Application.main(Application.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 63 common frames omitted
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 66 common frames omitted
+
+[2m2020-04-17 23:03:59.141[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.e.j.e.i.JdbcEnvironmentInitiator    [0;39m [2m:[0;39m HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2m2020-04-17 23:03:59.158[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[2m2020-04-17 23:03:59.190[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.e.j.e.i.LobCreatorBuilderImpl       [0;39m [2m:[0;39m HHH000422: Disabling contextual LOB creation as connection was null
+[2m2020-04-17 23:04:00.378[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.HikariDataSource      [0;39m [2m:[0;39m HikariPool-1 - Starting...
+[2m2020-04-17 23:04:04.381[0;39m [31mERROR [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mcom.zaxxer.hikari.pool.HikariPool       [0;39m [2m:[0;39m HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at com.zaxxer.hikari.HikariDataSource$$FastClassBySpringCGLIB$$eeb1ae86.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zaxxer.hikari.HikariDataSource$$EnhancerBySpringCGLIB$$49881648.getConnection(<generated>)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:132)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:61)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:191)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1250)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1767)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at vt.qlkdtt.yte.Application.main(Application.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 61 common frames omitted
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 64 common frames omitted
+
+[2m2020-04-17 23:04:04.384[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m SQL Error: 0, SQLState: 08S01
+[2m2020-04-17 23:04:04.384[0;39m [31mERROR [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.h.engine.jdbc.spi.SqlExceptionHelper  [0;39m [2m:[0;39m Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+[2m2020-04-17 23:04:04.390[0;39m [33m WARN [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mConfigServletWebServerApplicationContext[0;39m [2m:[0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+[2m2020-04-17 23:04:04.396[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Stopping service [Tomcat]
+[2m2020-04-17 23:04:04.421[0;39m [32m INFO [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mConditionEvaluationReportLoggingListener[0;39m [2m:[0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2m2020-04-17 23:04:04.434[0;39m [31mERROR [vt.qlkdtt-yte-ws,,,][0;39m [35m7312[0;39m [2m---[0;39m [2m[  restartedMain][0;39m [36mo.s.boot.SpringApplication              [0;39m [2m:[0;39m Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at vt.qlkdtt.yte.Application.main(Application.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:403)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:378)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1830)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1767)
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:115)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:132)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:61)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:191)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1250)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
+	... 25 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at com.zaxxer.hikari.HikariDataSource$$FastClassBySpringCGLIB$$eeb1ae86.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:136)
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.zaxxer.hikari.HikariDataSource$$EnhancerBySpringCGLIB$$49881648.getConnection(<generated>)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	... 39 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 61 common frames omitted
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 64 common frames omitted
+

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_detail_medical_v1.1" pageWidth="1700" pageHeight="595" orientation="Landscape" columnWidth="1660" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c121947b-144f-450d-84d2-158ab810960b">
+	<property name="ireport.zoom" value="1.996500000000011"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.text.truncate.at.char" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="locahost"/>
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="732"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="258"/>
+	<parameter name="m_param01" class="java.lang.String"/>
+	<parameter name="m_param02" class="java.lang.String"/>
+	<parameter name="m_param03" class="java.lang.String"/>
+	<parameter name="m_param04" class="java.lang.String"/>
+	<parameter name="m_param05" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select c.CUSTOMER_ID , (select glv.name from global_list_value glv , global_list gl
+        where glv.GLOBAL_LIST_ID = gl.GLOBAL_LIST_ID and glv.STATUS = '1' and gl.STATUS = '1'
+        and glv.VALUE = c.CUSTOMER_TYPE and gl.CODE = 'CUSTOMER_TYPE') as CUSTOMER_TYPE,
+       c.NAME , s.MEDICAL_ORG_TYPE , ca.ACCOUNT_NO, ca.ACCOUNT_SERVICE_NO
+       , (select PRODUCT_CODE from product where PRODUCT_ID = s.PRODUCT_ID) as PRODUCT_ID
+       , (select CODE from product_offer where PRODUCT_OFFER_ID = s.PRODUCT_OFFER_ID) as PRODUCT_OFFER_ID
+       , cc.CONTRACT_NO , s.CREATE_USER ,s.EFFECTIVE_DATE, s.EXPIRE_DATE
+       , s.VOL_BASE , s.VOL_PROMOTION, '' BRANCH_CODE, s.SHOP_CODE , s.CREATE_USER
+       , s.STAFF_CODE , s.BROKERS_PARTNER_CODE, s.PROVISON_TYPE, s.PRICE_SALES
+from subscriber s left join customer c on (s.CUSTOMER_ID = c.CUSTOMER_ID)
+   left join customer_contract cc on (s.CUSTOMER_CONTRACT_ID = cc.CONTRACT_ID)
+   left join customer_account ca on (s.CUSTOMER_ACCOUNT_ID = ca.ACCOUNT_ID)
+where s.STATUS = '2'
+and ( s.EFFECTIVE_DATE >= STR_TO_DATE($P{m_param02},'%d-%m-%Y') or $P{m_param02} IS NULL )
+and ( s.EXPIRE_DATE <= STR_TO_DATE($P{m_param03},'%d-%m-%Y') or $P{m_param03} IS NULL)
+and ( CUSTOMER_TYPE = $P{m_param01} or $P{m_param01} IS NULL)
+and ( SHOP_CODE = $P{m_param04} or $P{m_param04} IS NULL)
+and (STAFF_CODE = $P{m_param05} or $P{m_param05} IS NULL)]]>
+	</queryString>
+	<field name="CUSTOMER_ID" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="CUSTOMER_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="CUSTOMER_TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CUSTOMER_TYPE"/>
+	</field>
+	<field name="PRODUCT_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PRODUCT_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="MEDICAL_ORG_TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MEDICAL_ORG_TYPE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="ACCOUNT_NO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ACCOUNT_NO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer_account"/>
+	</field>
+	<field name="ACCOUNT_SERVICE_NO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ACCOUNT_SERVICE_NO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer_account"/>
+	</field>
+	<field name="CONTRACT_NO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CONTRACT_NO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer_contract"/>
+	</field>
+	<field name="BRANCH_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BRANCH_CODE"/>
+	</field>
+	<field name="CREATE_USER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CREATE_DATETIME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="STAFF_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="STAFF_CODE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="BROKERS_PARTNER_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BROKERS_PARTNER_CODE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="EFFECTIVE_DATE" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="EFFECTIVE_DATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="EXPIRE_DATE" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="EXPIRE_DATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="PRODUCT_OFFER_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PRODUCT_OFFER_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="PROVISON_TYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PROVISON_TYPE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<field name="PRICE_SALES" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="PRICE_SALES"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="subscriber"/>
+	</field>
+	<sortField name="CUSTOMER_ID"/>
+	<variable name="sequenceNum" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{CUSTOMER_ID}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="624" y="0" width="500" height="50" uuid="38f7a25d-86ec-47d0-b22c-3b56aa131cce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Báo cáo chi tiết doanh thu dịch vụ y tế]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="624" y="45" width="500" height="20" uuid="d2e2222e-c1dd-417f-ad0e-0fe09ab5144d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ngày báo cáo: " + new SimpleDateFormat("dd/MM/yyyy").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="39" height="30" backcolor="#99CCFF" uuid="45c2e93c-6ca0-417a-b304-9e3ae786c726">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[STT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="39" y="0" width="91" height="30" backcolor="#99CCFF" uuid="5023bf2c-265d-4903-9713-fd544994c82b">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mã khách hàng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="130" y="0" width="100" height="30" backcolor="#99CCFF" uuid="c7015b85-fa04-45b4-b73f-b0d850efa59a">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loại khách hàng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="230" y="0" width="90" height="30" backcolor="#99CCFF" uuid="dd0c6ca5-bf69-4dc3-b580-49def56b4af0">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sản phẩm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="320" y="0" width="80" height="30" backcolor="#99CCFF" uuid="ea2acdcd-6fdd-4595-9cf7-38d9f3959494">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tên Khách hàng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="400" y="0" width="80" height="30" backcolor="#99CCFF" uuid="0e163f8f-b266-4744-ab0d-d83e04405abe">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loại hình cơ sở y tế]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="480" y="0" width="100" height="30" backcolor="#99CCFF" uuid="75d3c171-dc31-4f91-9442-8ef3856550d5">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Account No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="580" y="0" width="100" height="30" backcolor="#99CCFF" uuid="e62a9a84-dacc-4127-9176-6563633cbea9">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tài khoản dịch vụ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="680" y="0" width="100" height="30" backcolor="#99CCFF" uuid="3a0d63d0-0c56-4746-8c04-80d2a3828b72">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số hợp đồng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="780" y="0" width="100" height="30" backcolor="#99CCFF" uuid="dda6a840-c08f-4091-b777-7dd7864c949c">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chi nhánh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="880" y="0" width="100" height="30" backcolor="#99CCFF" uuid="54999ba1-fcc3-4255-801c-aabebfb36f37">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User đầu nối]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="980" y="0" width="100" height="30" backcolor="#99CCFF" uuid="63c9ee88-d62e-4a24-9c65-4d840cedb18f">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nhân viên phát triển]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1080" y="0" width="100" height="30" backcolor="#99CCFF" uuid="c6bd8fc5-10a9-4bb0-9a57-84594e62e770">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Công tác viên mô giới]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1180" y="0" width="100" height="30" backcolor="#99CCFF" uuid="91e541e2-0ef9-4d7f-8699-355a8bd7a13d">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày nghiệm thu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1280" y="0" width="100" height="30" backcolor="#99CCFF" uuid="45c2953b-53cc-4b6f-9e44-e10ff45fa977">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày hết hạn dùng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1380" y="0" width="100" height="30" backcolor="#99CCFF" uuid="6c153ac6-efc0-4ac7-9282-f23c13d692da">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mã gói cước]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1480" y="0" width="100" height="30" backcolor="#99CCFF" uuid="9fecc43f-1531-49ce-8266-53f17062a648">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hình thức cung cấp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1580" y="0" width="100" height="30" backcolor="#99CCFF" uuid="cdabbb6f-0062-43c3-9a10-766146a69b17">
+					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Đơn giá]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35">
+			<textField pattern="#,##0" isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="0" y="0" width="39" height="35" uuid="3d38f3f2-b945-4461-980b-67f42fb5605b"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sequenceNum}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="39" y="0" width="91" height="35" uuid="c7f478b7-08b4-458c-97f5-28ada4c6df9c"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="100" height="35" uuid="c656238a-dd06-47f1-be39-4fbb6a44e3ce"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CUSTOMER_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="80" height="35" uuid="4400ee85-471e-428f-a7df-daf0cc5476c6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="80" height="35" uuid="08161dba-fe94-4ed1-a720-ecf91f63cc89"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{MEDICAL_ORG_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="100" height="35" uuid="813f9bd9-2f95-48e1-b8da-43a703017782"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ACCOUNT_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="576" y="0" width="100" height="35" uuid="01135b36-8b52-4aa1-abbd-c719bdf3447a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ACCOUNT_SERVICE_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="0" width="100" height="35" uuid="34a8a339-bce9-4fa2-9bb1-177991d83e9a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CONTRACT_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="780" y="0" width="100" height="35" uuid="3ee3bce8-3763-4b17-804f-fc542c23af76"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{BRANCH_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="880" y="0" width="100" height="35" uuid="2e74d980-14fa-43eb-8cd2-d807ddf1722c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CREATE_USER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="980" y="0" width="100" height="35" uuid="0ae1ef6a-d6e9-432c-83f3-b6a78ebdf606"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{STAFF_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1080" y="0" width="100" height="35" uuid="10814333-77f0-410c-8eb4-f4bb805fa601"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{BROKERS_PARTNER_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1180" y="0" width="100" height="35" uuid="d123b097-8db3-4d49-9bbe-097d0841be3f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EFFECTIVE_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1280" y="0" width="100" height="35" uuid="72917318-fe7e-4e84-9ac3-3287083d9b13"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{EXPIRE_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1380" y="0" width="100" height="35" uuid="63897310-531e-40dd-ae43-17ef9c408495"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PRODUCT_OFFER_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1480" y="0" width="100" height="35" uuid="de73efb4-40c0-44ac-813a-459aa1b49ac4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PROVISON_TYPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1580" y="0" width="100" height="35" uuid="bb225f23-cc5b-4870-8766-36800cafe000"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PRICE_SALES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="90" height="35" uuid="e7d50022-1b71-4006-ac5d-2f678c707494"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{PRODUCT_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="10" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

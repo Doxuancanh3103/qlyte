@@ -1,0 +1,665 @@
+<Results>
+    <UserData>
+        <Row>
+            <USER_ID>7233850</USER_ID>
+            <USER_RIGHT>1</USER_RIGHT>
+            <USER_NAME>admin</USER_NAME>
+            <PASSWORD>8O7g/HH+aAxv3iH5XKxatQkdSNA=</PASSWORD>
+            <STATUS>1</STATUS>
+            <EMAIL>dungnh@vietants.vn</EMAIL>
+            <CELLPHONE>0987203580</CELLPHONE>
+            <GENDER>1</GENDER>
+            <LAST_CHANGE_PASSWORD>24/04/2020</LAST_CHANGE_PASSWORD>
+            <LAST_BLOCK_DATE>07/01/2020</LAST_BLOCK_DATE>
+            <LOGIN_FAILURE_COUNT>0</LOGIN_FAILURE_COUNT>
+            <LAST_LOGIN_FAILURE>27/04/2020</LAST_LOGIN_FAILURE>
+            <IDENTITY_CARD>123456788</IDENTITY_CARD>
+            <FULL_NAME>Nguyễn Hữu Dũng</FULL_NAME>
+            <USER_TYPE_ID>282</USER_TYPE_ID>
+            <CREATE_DATE>2015-05-14</CREATE_DATE>
+            <STAFF_CODE>075770</STAFF_CODE>
+            <MANAGER_ID>1010</MANAGER_ID>
+            <LOCATION_ID>462</LOCATION_ID>
+            <PASSWORDCHANGED>1</PASSWORDCHANGED>
+            <LAST_LOGIN>27/04/2020</LAST_LOGIN>
+            <PROFILE_ID>103</PROFILE_ID>
+            <LAST_RESET_PASSWORD>04/04/2020</LAST_RESET_PASSWORD>
+            <IP>1.1.1.1</IP>
+            <DEPT_ID>427605</DEPT_ID>
+            <DEPT_LEVEL>DEV</DEPT_LEVEL>
+            <POS_ID>5</POS_ID>
+            <DEPT_NAME>DEV</DEPT_NAME>
+            <CHECK_VALID_TIME>0</CHECK_VALID_TIME>
+            <START_TIME_TO_CHANGE_PASSWORD>14/04/2020</START_TIME_TO_CHANGE_PASSWORD>
+            <IP_LAN>1.1.1.1</IP_LAN>
+            <LAST_UNLOCK>14/04/2020</LAST_UNLOCK>
+            <CHECK_IP>0</CHECK_IP>
+            <CHECK_IP_LAN>0</CHECK_IP_LAN>
+            <LAST_LOCK>24/04/2020</LAST_LOCK>
+            <TEMP_LOCK_COUNT>0</TEMP_LOCK_COUNT>
+            <USE_SALT>1</USE_SALT>
+            <TEMP_PAZZ>hTyWCgESoafFhqPPEWra97uyirQ</TEMP_PAZZ>
+            <CAUSE_LOCK_USER>Khoa tai khoan do da qua thoi gian phai thay doi mat khau dinh ky boi Passport ngay Fri Apr 24 16:28:29 ICT 2020</CAUSE_LOCK_USER>
+            <LOGIN_FAIL_ALLOW>150</LOGIN_FAIL_ALLOW>
+            <TEMPORARY_LOCK_TIME>1</TEMPORARY_LOCK_TIME>
+            <MAX_TMP_LOCK_ADAY>150</MAX_TMP_LOCK_ADAY>
+            <PASSWORD_VALID_TIME>5</PASSWORD_VALID_TIME>
+            <USER_VALID_TIME>1000</USER_VALID_TIME>
+            <ALLOW_MULTI_IP_LOGIN>1</ALLOW_MULTI_IP_LOGIN>
+            <ALLOW_IP>*.*.*.*</ALLOW_IP>
+            <ALLOW_LOGIN_TIME_START>0</ALLOW_LOGIN_TIME_START>
+            <ALLOW_LOGIN_TIME_END>23</ALLOW_LOGIN_TIME_END>
+            <ID>103</ID>
+            <NAME>DUNGNH</NAME>
+            <NEED_CHANGE_PASSWORD>0</NEED_CHANGE_PASSWORD>
+            <TIME_TO_CHANGE_PASSWORD>5</TIME_TO_CHANGE_PASSWORD>
+            <TIME_TO_PASSWORD_EXPIRE>2</TIME_TO_PASSWORD_EXPIRE>
+        </Row>
+    </UserData>
+    <Depts/>
+    <Roles>
+        <Row>
+            <STATUS>1</STATUS>
+            <ROLE_ID>1</ROLE_ID>
+            <ROLE_NAME>ADMIN</ROLE_NAME>
+            <DESCRIPTION>ADMIN</DESCRIPTION>
+            <ROLE_CODE>ADMIN</ROLE_CODE>
+            <IP_OFFICE_WAN>0</IP_OFFICE_WAN>
+        </Row>
+    </Roles>
+    <ObjectAll>
+		<Row>
+            <OBJECT_ID>33398705</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+            <OBJECT_NAME>Hệ thống Quản lý kinh doanh GPCNTT</OBJECT_NAME>
+            <DESCRIPTION>QLKDTT_GPCNTT</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QLKDTT_GPCNTT</OBJECT_CODE>
+            <OBJECT_LEVEL>00000105950033398705</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399146</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+            <OBJECT_NAME>CHÍNH SÁCH BÁN HÀNG</OBJECT_NAME>
+            <DESCRIPTION>CHÍNH SÁCH BÁN HÀNG</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>CHINH_SACH_BAN_HANG</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399146</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399147</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+			<OBJECT_URL>customer_order</OBJECT_URL>
+            <OBJECT_NAME>QUẢN LÝ YÊU CẦU</OBJECT_NAME>
+            <DESCRIPTION>QUẢN LÝ YÊU CẦU</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_YEU_CAU</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399147</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399147</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399147</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+			<OBJECT_URL>customer_order_detail</OBJECT_URL>
+            <OBJECT_NAME>QUẢN LÝ YÊU CẦU</OBJECT_NAME>
+            <DESCRIPTION>QUẢN LÝ YÊU CẦU</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_YEU_CAU</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399147</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399148</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+            <OBJECT_NAME>KẾ HOẠCH BÁN HÀNG</OBJECT_NAME>
+            <DESCRIPTION>KẾ HOẠCH BÁN HÀNG</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>KE_HOACH_BAN_HANG</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399148</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399149</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+            <OBJECT_NAME>CUNG CẤP DỊCH VỤ</OBJECT_NAME>
+            <DESCRIPTION>CUNG CẤP DỊCH VỤ</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>CUNG_CAP_DICH_VU</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399149</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399150</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>3</ORD>
+			<OBJECT_URL>customer_service</OBJECT_URL>
+            <OBJECT_NAME>NGHIỆP VỤ SAU BÁN</OBJECT_NAME>
+            <DESCRIPTION>NGHIỆP VỤ SAU BÁN</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>NGHIEP_VU_SAU_BAN</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399150</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399150</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399150</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>3</ORD>
+			<OBJECT_URL>customer_service_detail</OBJECT_URL>
+            <OBJECT_NAME>NGHIỆP VỤ SAU BÁN</OBJECT_NAME>
+            <DESCRIPTION>NGHIỆP VỤ SAU BÁN</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>NGHIEP_VU_SAU_BAN</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399150</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399151</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399150</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>3</ORD>
+			<OBJECT_URL>customer_service_edit</OBJECT_URL>
+            <OBJECT_NAME>NGHIỆP VỤ SAU BÁN</OBJECT_NAME>
+            <DESCRIPTION>NGHIỆP VỤ SAU BÁN</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>NGHIEP_VU_SAU_BAN</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399150</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399152</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399150</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>3</ORD>
+			<OBJECT_URL>customer_service_create</OBJECT_URL>
+            <OBJECT_NAME>NGHIỆP VỤ SAU BÁN</OBJECT_NAME>
+            <DESCRIPTION>NGHIỆP VỤ SAU BÁN</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>NGHIEP_VU_SAU_BAN</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399150</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399151</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>4</ORD>
+			<OBJECT_URL>contract</OBJECT_URL>
+            <OBJECT_NAME>QUẢN LÝ HỢP ĐỒNG</OBJECT_NAME>
+            <DESCRIPTION>QUẢN LÝ HỢP ĐỒNG</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_HOP_DONG</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399151</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399151</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399151</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>4</ORD>
+			<OBJECT_URL>contract_detail</OBJECT_URL>
+            <OBJECT_NAME>QUẢN LÝ HỢP ĐỒNG</OBJECT_NAME>
+            <DESCRIPTION>QUẢN LÝ HỢP ĐỒNG</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_HOP_DONG</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399151</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33398705</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399150</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>4</ORD>
+			<OBJECT_URL>settings_global_list</OBJECT_URL>
+            <OBJECT_NAME>QUẢN LÝ HỢP ĐỒNG</OBJECT_NAME>
+            <DESCRIPTION>QUẢN LÝ HỢP ĐỒNG</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_HOP_DONG</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399151</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33398705</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399150</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>4</ORD>
+			<OBJECT_URL>settings_global_params</OBJECT_URL>
+            <OBJECT_NAME>QUẢN LÝ HỢP ĐỒNG</OBJECT_NAME>
+            <DESCRIPTION>QUẢN LÝ HỢP ĐỒNG</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_HOP_DONG</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399151</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399152</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>5</ORD>
+            <OBJECT_NAME>THANH TOÁN</OBJECT_NAME>
+            <DESCRIPTION>THANH TOÁN</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>THANH_TOAN</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399152</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399153</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33398705</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>6</ORD>
+            <OBJECT_NAME>BÁO CÁO</OBJECT_NAME>
+            <DESCRIPTION>BÁO CÁO</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>BAO_CAO</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399153</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399154</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399146</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>partner</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Đối Tác</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Đối Tác</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_DOI_TAC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399154</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399154</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399154</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>partner_detail</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Đối Tác</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Đối Tác</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_DOI_TAC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399154</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399155</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399154</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>partner_edit</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Đối Tác</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Đối Tác</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_DOI_TAC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399154</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399156</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399154</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>partner_create</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Đối Tác</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Đối Tác</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_DOI_TAC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399154</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399155</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399146</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+			<OBJECT_URL>product</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Sản Phẩm</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Sản Phẩm</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_SAN_PHAM</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399155</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+        <Row>
+            <OBJECT_ID>43399155</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399155</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+            <OBJECT_URL>product_create</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Sản Phẩm</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Sản Phẩm</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_SAN_PHAM</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399155</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+        <Row>
+            <OBJECT_ID>43399157</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399155</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+            <OBJECT_URL>product_detail</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Sản Phẩm</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Sản Phẩm</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_SAN_PHAM</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399155</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+        <Row>
+            <OBJECT_ID>43399156</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399155</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+            <OBJECT_URL>product_edit</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Sản Phẩm</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Sản Phẩm</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_SAN_PHAM</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399155</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399156</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399146</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+			<OBJECT_URL>product_offer</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Gói Cước</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Gói Cước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_GOI_CUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399156</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399156</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399156</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+			<OBJECT_URL>product_offer_create</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Gói Cước</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Gói Cước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_GOI_CUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399156</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399157</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399156</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+			<OBJECT_URL>product_offer_detail</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Gói Cước</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Gói Cước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_GOI_CUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399156</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399158</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399156</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+			<OBJECT_URL>product_offer_edit</OBJECT_URL>
+            <OBJECT_NAME>Quản Lý Gói Cước</OBJECT_NAME>
+            <DESCRIPTION>Quản Lý Gói Cước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUAN_LY_GOI_CUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399156</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399157</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399149</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>customer_prospective</OBJECT_URL>
+            <OBJECT_NAME>Khách Hàng Tạo Trước</OBJECT_NAME>
+            <DESCRIPTION>Khách Hàng Tạo Trước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>KHACH_HANG_TAO_TRUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399157</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>43399157</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399157</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>customer_prospective_create</OBJECT_URL>
+            <OBJECT_NAME>Khách Hàng Tạo Trước</OBJECT_NAME>
+            <DESCRIPTION>Khách Hàng Tạo Trước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>KHACH_HANG_TAO_TRUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399157</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+        <Row>
+            <OBJECT_ID>43399158</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399157</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>customer_prospective_detail</OBJECT_URL>
+            <OBJECT_NAME>Khách Hàng Tạo Trước</OBJECT_NAME>
+            <DESCRIPTION>Khách Hàng Tạo Trước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>KHACH_HANG_TAO_TRUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399157</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+        <Row>
+            <OBJECT_ID>43399159</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399157</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>customer_prospective_edit</OBJECT_URL>
+            <OBJECT_NAME>Khách Hàng Tạo Trước</OBJECT_NAME>
+            <DESCRIPTION>Khách Hàng Tạo Trước</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>KHACH_HANG_TAO_TRUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399157</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399158</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399149</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+			<OBJECT_URL>ksdv</OBJECT_URL>
+            <OBJECT_NAME>Khảo Sát Dịch Vụ</OBJECT_NAME>
+            <DESCRIPTION>Khảo Sát Dịch Vụ</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>KHAO_SAT_DICH_VU</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399158</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399159</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399149</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+			<OBJECT_URL>connecting_service</OBJECT_URL>
+            <OBJECT_NAME>Đấu Nối Dịch Vụ</OBJECT_NAME>
+            <DESCRIPTION>Đấu Nối Dịch Vụ</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>DAU_NOI_DICH_VU</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399159</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399160</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399149</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>3</ORD>
+			<OBJECT_URL>tkdv</OBJECT_URL>
+            <OBJECT_NAME>Triển Khai Dịch Vụ</OBJECT_NAME>
+            <DESCRIPTION>Triển Khai Dịch Vụ</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>TRIEN_KHAI_DICH_VU</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399160</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399161</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399149</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>4</ORD>
+			<OBJECT_URL>tcgd</OBJECT_URL>
+            <OBJECT_NAME>Tra Cứu Giao Dịch</OBJECT_NAME>
+            <DESCRIPTION>Tra Cứu Giao Dịch</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>TRA_CUU_GIAO_DICH</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399161</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>		
+		<Row>
+            <OBJECT_ID>33399162</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399153</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+			<OBJECT_URL>ptm</OBJECT_URL>
+            <OBJECT_NAME>Phát Triển Mới</OBJECT_NAME>
+            <DESCRIPTION>Phát Triển Mới</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>PHAT_TRIEN_MOI</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399162</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399163</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399153</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+			<OBJECT_URL>dttsp</OBJECT_URL>
+            <OBJECT_NAME>Doanh Thu Theo Sản Phẩm</OBJECT_NAME>
+            <DESCRIPTION>Doanh Thu Theo Sản Phẩm</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>DOANH_THU_THEO_SAN_PHAM</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399163</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399164</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399153</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>2</ORD>
+			<OBJECT_URL>dttdt</OBJECT_URL>
+            <OBJECT_NAME>Doanh Thu Theo Đối Tác</OBJECT_NAME>
+            <DESCRIPTION>Doanh Thu Theo Đối Tác</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>DOANH_THU_THEO_DOI_TAC</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399164</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399165</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399153</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>3</ORD>
+			<OBJECT_URL>cnvtt</OBJECT_URL>
+            <OBJECT_NAME>Công Nợ Và Thanh Toán</OBJECT_NAME>
+            <DESCRIPTION>Công Nợ Và Thanh Toán</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>CONG_NO_VA_THANH_TOAN</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399165</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399166</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399153</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>3</ORD>
+			<OBJECT_URL>cnvtt</OBJECT_URL>
+            <OBJECT_NAME>Đối Soát Dịch Vụ</OBJECT_NAME>
+            <DESCRIPTION>Đối Soát Dịch Vụ</DESCRIPTION>
+            <OBJECT_TYPE_ID>0</OBJECT_TYPE_ID>
+            <OBJECT_CODE>DOI_SOAT_DICH_VU</OBJECT_CODE>
+            <OBJECT_LEVEL>000001059500333987050033399166</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>		
+		<Row>
+            <OBJECT_ID>33399167</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399149</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>0</ORD>
+            <OBJECT_NAME>QUYEN_THEM_MOI_KHACH_HANG_TAO_TRUOC</OBJECT_NAME>
+            <DESCRIPTION>Quyền thêm mới khách hàng tạo trước</DESCRIPTION>
+            <OBJECT_TYPE_ID>1</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUYEN_THEM_MOI_KHACH_HANG_TAO_TRUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>0000010595003339870500333987060033399167</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+		<Row>
+            <OBJECT_ID>33399168</OBJECT_ID>
+            <APP_ID>10595</APP_ID>
+            <PARENT_ID>33399149</PARENT_ID>
+            <STATUS>1</STATUS>
+            <ORD>1</ORD>
+            <OBJECT_NAME>QUYEN_TIM_KIEM_KHACH_HANG_TAO_TRUOC</OBJECT_NAME>
+            <DESCRIPTION>Quyền tìm kiếm khách hàng tạo trước</DESCRIPTION>
+            <OBJECT_TYPE_ID>1</OBJECT_TYPE_ID>
+            <OBJECT_CODE>QUYEN_TIM_KIEM_KHACH_HANG_TAO_TRUOC</OBJECT_CODE>
+            <OBJECT_LEVEL>0000010595003339870500333987060033399168</OBJECT_LEVEL>
+            <CREATE_DATE>2020-06-17</CREATE_DATE>
+        </Row>
+    </ObjectAll>
+</Results>
